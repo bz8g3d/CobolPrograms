@@ -1,0 +1,59 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. EIGER04.
+      * Listing 3.10. Nested PERFORM             - Page 65
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+
+       WORKING-STORAGE SECTION.
+
+         01 THE-MESSAGE PIC X(50).
+         01 THE-NUMBER PIC 9(2).
+         01  A-SPACE PIC X.
+
+       PROCEDURE DIVISION.
+       PROGRAM-BEGIN.
+      * Initialize the space variable
+            MOVE  " " TO A-SPACE.
+      * Start THE-NUMBER AT 0
+            MOVE  0  TO THE-NUMBER.
+      * Set up and display line 1
+            MOVE  "There once was a lady from Eiger,"
+                  TO THE-MESSAGE.
+            PERFORM ADD-NUMBER-AND-DISPLAY.
+
+      * Set up and display line 2
+            MOVE  "who smiled and rode forth on a tiger."
+                  TO THE-MESSAGE.
+            PERFORM ADD-NUMBER-AND-DISPLAY.
+
+      * Set up and display line 3
+            MOVE  "They returned from the ride"    TO THE-MESSAGE.
+            PERFORM ADD-NUMBER-AND-DISPLAY.
+
+      * Set up and display line 4
+            MOVE  "with the lady inside,"    TO THE-MESSAGE.
+            PERFORM ADD-NUMBER-AND-DISPLAY.
+
+      * Set up and display line 5
+              MOVE  "And the smile o the face of the tiger."
+              TO THE-MESSAGE.
+            PERFORM ADD-NUMBER-AND-DISPLAY.
+       PROGRAM-DONE.
+           STOP RUN.
+
+      * This paragraph is PERFORMED 5 times from within
+      * PROGRAM-BEGIN. This paragraph in turn PERFORMS
+      * Two other paragraphs
+       ADD-NUMBER-AND-DISPLAY.
+            PERFORM ADD-THE-NUMBER.
+             PERFORM DISPLAY-THE-MESSAGE.
+      * These two paragraphs will each be performed 5 times as
+      * they are each performed every time ADD-NUMBER-AND-DISPLAY
+      * is performed.
+        ADD-THE-NUMBER.
+            ADD 1 TO THE-NUMBER.
+        DISPLAY-THE-MESSAGE.
+            DISPLAY
+            THE-NUMBER
+            A-SPACE
+            THE-MESSAGE.

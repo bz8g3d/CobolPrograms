@@ -1,0 +1,66 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. EIGER03.
+      * Listing 3.8. Repetitive actions. Page 60-62.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+
+       WORKING-STORAGE SECTION.
+
+         01 THE-MESSAGE PIC X(50).
+         01 THE-NUMBER PIC 9(2).
+         01  A-SPACE PIC X.
+
+       PROCEDURE DIVISION.
+       PROGRAM-BEGIN.
+      * Initialize the space variable
+            MOVE  " " TO A-SPACE.
+      * Start THE-NUMBER AT 0
+            MOVE  0  TO THE-NUMBER.
+      * Set up and display line 1
+            MOVE  "There once was a lady from Eiger,"
+                  TO THE-MESSAGE.
+            ADD 1 TO THE-NUMBER.
+            DISPLAY
+                THE-NUMBER
+                A-SPACE
+                THE-MESSAGE.
+
+      * Set up and display line 2
+            MOVE  "who smiled and rode forth on a tiger."
+                  TO THE-MESSAGE.
+            ADD 1 TO THE-NUMBER.
+            DISPLAY
+                THE-NUMBER
+                A-SPACE
+                THE-MESSAGE.
+
+      * Set up and display line 3
+            MOVE  "They returned from the ride"    TO THE-MESSAGE.
+            ADD 1 TO THE-NUMBER.
+            DISPLAY
+                THE-NUMBER
+                A-SPACE
+                THE-MESSAGE.
+
+      * Set up and display line 4
+            MOVE  "with the lady inside,"    TO THE-MESSAGE.
+            ADD 1 TO THE-NUMBER.
+            DISPLAY
+                THE-NUMBER
+                A-SPACE
+                THE-MESSAGE.
+
+      * Set up and display line 5
+              MOVE  "And the smile o the face of the tiger."
+              TO THE-MESSAGE.
+              ADD 1 TO THE-NUMBER.
+              DISPLAY
+                THE-NUMBER
+                A-SPACE
+                THE-MESSAGE.
+       PROGRAM-DONE.
+           STOP RUN.
+      *ANALYSIS: If you inspect lines 002300 through 002700 and lines 00
+      *you'll find that the actions are identical
+      *These appear again in lines 004000 through 004400.
+      *In fact, these two sentences are repeated five times in the progr

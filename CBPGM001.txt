@@ -1,0 +1,12 @@
+        IDENTIFICATION DIVISION.
+        PROGRAM-ID. HELLO.
+      * Remarks: My first PGM in Cobol
+        ENVIRONMENT DIVISION.
+        DATA DIVISION.
+        PROCEDURE DIVISION.
+         PROGRAM-BEGIN.
+
+             DISPLAY  MY 1st PGM'.
+
+         PROGRAM-DONE.
+             STOP RUN.

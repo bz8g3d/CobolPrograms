@@ -1,0 +1,29 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. ADD05.
+      * Listing 3.5. A forced STOP RUN. Page 56
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+
+       WORKING-STORAGE SECTION.
+
+         01 FIRST-NUMBER PICTURE IS 99.
+         01 SECOND-NUMBER PICTURE IS 99.
+         01 THE-RESULT PICTURE IS 999.
+
+       PROCEDURE DIVISION.
+       PROGRAM-BEGIN.
+             DISPLAY "This program will add 2 numbers.".
+              DISPLAY "Enter the first number."
+              ACCEPT FIRST-NUMBER.
+              DISPLAY "Fooled you, silly."
+               STOP RUN.
+
+              DISPLAY "Enter the second number."
+              ACCEPT SECOND-NUMBER.
+       STEP-04.
+               COMPUTE THE-RESULT = FIRST-NUMBER + SECOND-NUMBER.
+               DISPLAY "The result is " THE-RESULT.
+       PROGRAM-DONE.
+               STOP RUN.
+      *Obviously, the PROGRAM-DONE paragraph at line 002600 is misleadin
+      *program stops before this point.

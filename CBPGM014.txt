@@ -1,0 +1,22 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. HELLO04.
+
+      * Listing 3.6. Using PERFORM    Page 57
+      * This program illustrates the use of a PERFORM
+
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+      * WORKING STORAGE SECTION would come here
+
+       PROCEDURE DIVISION.
+       PROGRAM-BEGIN.
+             DISPLAY "Today's message is.".
+              PERFORM SAY-HELLO.
+       PROGRAM-DONE.
+              STOP RUN.
+       SAY-HELLO.
+           DISPLAY "Another CBL PGM done - Ello".
+      *1. Locate the paragraph named SAY-HELLO.
+      *2. Jump to that paragraph and start executing there.
+      *3. When that paragraph ends, return to the end of this sentence
+      *(PERFORM SAY-HELLO)

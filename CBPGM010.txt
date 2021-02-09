@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. COBSHL02.
+      * A new cobol shell including data.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       WORKING-STORAGE SECTION.
+
+       PROCEDURE DIVISION.
+         PROGRAM-BEGIN.
+             DISPLAY 'Hi'.
+         PROGRAM-DONE.
+              STOP RUN.

@@ -1,0 +1,20 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. HELLO05.
+
+      * Listing 3.7. An incorrectly placed paragraph Page 58
+      * This program illustrates s the incorrect placement of a
+      0* Paragraph that is the target of a perform
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+      * WORKING STORAGE SECTION would come here
+
+       PROCEDURE DIVISION.
+       PROGRAM-BEGIN.
+             DISPLAY "Today's message is.".
+              PERFORM SAY-HELLO.
+       SAY-HELLO.
+           DISPLAY "Another CBL PGM done - Ello".
+       PROGRAM-DONE.
+              STOP RUN.
+      *Line 00013. DISPLAY "Today's message is:" on-screen
+      *Line 00014. Jump to line 0015, the beginning of SAY-HELLO.

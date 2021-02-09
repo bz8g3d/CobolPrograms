@@ -1,0 +1,21 @@
+        IDENTIFICATION DIVISION.
+        PROGRAM-ID. COBPGM05.
+        ENVIRONMENT DIVISION.
+        DATA DIVISION.
+
+        WORKING-STORAGE SECTION.
+
+         01 THE-NAME PICTURE IS XXXXXXX.
+
+        PROCEDURE DIVISION.
+
+         PROGRAM-BEGIN.
+
+            DISPLAY "Enter someone's name.".
+
+            ACCEPT THE-NAME.
+
+            DISPLAY "Mr Ribeiro" THE-NAME.
+
+        PROGRAM-DONE.
+            STOP RUN.

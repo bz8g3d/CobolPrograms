@@ -1,0 +1,13 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. CBPGM003.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       PROCEDURE DIVISION.
+      *This is a comment
+      *This paragraph contains info about the PGM.
+       PROGRAM-BEGIN.
+               DISPLAY "THIS PROGRAM CONTAINS FOUR DIVISIONS,".
+               DISPLAY "THREE PARAGRAPHS".
+               DISPLAY "AND FOUR SENTENCES".
+       PROGRAM-DONE.
+               STOP RUN.

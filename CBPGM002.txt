@@ -1,0 +1,12 @@
+       IDENTIFICATION DIVISION.
+       PROGRAM-ID. CBPGM002.
+      *Remarks: Three levels of Cobol Grammar.
+       ENVIRONMENT DIVISION.
+       DATA DIVISION.
+       PROCEDURE DIVISION.
+       PROGRAM-BEGIN.
+               DISPLAY "THIS PROGRAM CONTAINS FOUR DIVISIONS,".
+               DISPLAY "THREE PARAGRAPHS".
+               DISPLAY "AND FOUR SENTENCES".
+       PROGRAM-DONE.
+               STOP RUN.
